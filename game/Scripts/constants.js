@@ -58,7 +58,7 @@ var constants = {
 	start_lives     : 3,
 	max_width       : 400,
 	max_height      : 15,
-	jumping_v       : 25,
+	jumping_v       : 27,
 	walking_v       : 5,
 	mushroom_v      : 3,
 	ballmonster_v   : 2,
