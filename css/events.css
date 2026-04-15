@@ -1,0 +1,372 @@
+/* ============================================================
+  Mario Community Hub - Events Page Styles
+  ============================================================ */
+
+/* ----------------------------------------------------------
+   2. Event Showcase Banner
+   ---------------------------------------------------------- */
+/* HTML layer map:
+   1) .event-showcase (top showcase section wrapper)
+   2) .event-banner (two-column intro layout)
+   3) .event-banner-copy + .event-kicker (copy block)
+  4) .event-banner-art + .event-banner-scene (decorative media layer) */
+.event-showcase {
+  margin-bottom: 2.2rem;
+}
+
+.event-banner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.4rem;
+  align-items: stretch;
+  margin-bottom: 1.5rem;
+}
+
+.event-banner-copy,
+.event-banner-art,
+.event-highlight-card {
+  border: 1px solid #d9e2ee; 
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  box-shadow: 0 14px 28px rgba(20, 34, 47, 0.08);
+}
+
+.event-banner-copy {
+  padding: 1.7rem;
+}
+
+.event-banner-copy h2 {
+  margin-bottom: 0.8rem;
+  color: #183047;
+}
+
+.event-banner-copy p {
+  margin-bottom: 1.2rem;
+  color: #4a5d73;
+}
+
+.event-kicker {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(145deg, var(--mario-red), #f07d2f);
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  font-family: var(--font-accent);
+}
+
+.event-banner-art {
+  position: relative;
+  overflow: hidden;
+  min-height: 240px;
+  background: linear-gradient(145deg, rgba(12, 34, 68, 0.84), rgba(73, 136, 207, 0.52));
+}
+
+.event-banner-scene {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(6, 32, 66, 0.22), rgba(6, 32, 66, 0.42)),
+    url("../imgs/super mario nintendo GIF.gif") center/cover no-repeat;
+  opacity: 0.8;
+}
+
+  /* ----------------------------------------------------------
+    3. Highlight Cards + Expandable Details
+    ---------------------------------------------------------- */
+  /* HTML layer map:
+    1) .event-highlight-grid (card grid wrapper)
+    2) .event-highlight-card (individual event card)
+    3) .event-highlight-media (compact-to-expanded visual area)
+    4) details.event-highlight-details (expandable info panel) */
+/* The media strip starts compact to protect the card rhythm, then expands on
+   hover/focus so the GIFs can feel more animated without dominating the page. */
+.event-highlight-grid {
+  gap: 1.25rem;
+}
+
+.event-highlight-card {
+  position: relative;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 32px rgba(20, 34, 47, 0.12);
+}
+
+.event-highlight-card h3 {
+  margin-bottom: 0.5rem;
+  color: #183047;
+}
+
+.event-highlight-card p {
+  margin: 0;
+  color: #52657b;
+}
+
+.event-highlight-details {
+  margin-top: 0.95rem;
+  padding: 0.65rem 0.75rem 0.55rem;
+  border: 1px solid #d8e3f2;
+  border-radius: 12px;
+  background: #f5f9ff;
+  overflow: hidden;
+  transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.3s ease;
+}
+
+.event-highlight-details[open] {
+  border-color: #a8c7f2;
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(25, 72, 134, 0.14);
+}
+
+.event-highlight-details summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: #1b4b84;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.event-highlight-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.event-highlight-details summary::after {
+  content: "+";
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 1.2rem;
+  line-height: 1;
+  padding: 0;
+  border-radius: 999px;
+  background: rgba(13, 110, 253, 0.13);
+  color: #1d5fb9;
+  font-weight: 800;
+  transition: background-color 0.25s ease;
+}
+
+.event-highlight-details[open] summary::after {
+  content: "-";
+  background: rgba(13, 110, 253, 0.2);
+}
+
+.event-highlight-details-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.event-highlight-details[open] .event-highlight-details-body {
+  grid-template-rows: 1fr;
+}
+
+.event-highlight-details-inner {
+  overflow: hidden;
+}
+
+.event-highlight-details ul {
+  margin: 0.65rem 0 0 1rem;
+  color: #415974;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.event-highlight-details[open] ul {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.event-highlight-details li {
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.event-highlight-media {
+  height: 76px;
+  margin-bottom: 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transition: height 0.32s ease, box-shadow 0.32s ease;
+}
+
+.event-highlight-card:hover .event-highlight-media,
+.event-highlight-card:focus-within .event-highlight-media {
+  height: 176px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 10px 22px rgba(18, 52, 97, 0.24);
+}
+
+.event-highlight-logo {
+  background:
+    linear-gradient(135deg, rgba(16, 44, 87, 0.58), rgba(73, 136, 207, 0.28)),
+    url("../imgs/mario_and_peach.gif") center/cover no-repeat;
+}
+
+.event-highlight-objects {
+  background:
+    linear-gradient(135deg, rgba(146, 78, 27, 0.52), rgba(251, 208, 0, 0.24)),
+    url("../imgs/mario-characters-racing.gif") center/cover no-repeat;
+}
+
+.event-highlight-sprites {
+  background:
+    linear-gradient(135deg, rgba(45, 77, 34, 0.5), rgba(67, 176, 71, 0.24)),
+    url("../imgs/giphy.gif") center/cover no-repeat;
+}
+
+/* ----------------------------------------------------------
+  4. Schedule Table + Filters
+  ---------------------------------------------------------- */
+/* HTML layer map:
+  1) .events-table-wrap > .events-table (schedule data container)
+  2) .schedule-controls + .schedule-filter (interactive filter chips)
+  3) .schedule-live-tip (helper status line)
+  4) row utility classes: .row-active / .row-hidden */
+.events-table-wrap {
+  background: #fff;
+  border: 1px solid #dde4ee;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(20, 34, 47, 0.08);
+}
+
+.events-table thead th {
+  background-color: var(--mario-red);
+  color: #fff;
+  border-bottom: 0;
+  padding: 1rem;
+  white-space: nowrap;
+}
+
+.events-table tbody td {
+  padding: 1rem;
+  color: #45576c;
+  border-color: #e3eaf2;
+}
+
+.events-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.events-table tbody tr:nth-child(even) td {
+  background-color: #ffffff;
+}
+
+.events-table tbody tr:hover td {
+  background-color: #eef6ff;
+}
+
+.events-table tbody tr.row-active td {
+  background-color: #dcecff;
+}
+
+.events-table tbody tr.row-hidden {
+  display: none;
+}
+
+.schedule-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.schedule-filter {
+  border: 1px solid #c9d8ed;
+  border-radius: 999px;
+  padding: 0.38rem 0.85rem;
+  background: #ffffff;
+  color: #264f7f;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: 0.98rem;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+/* Accent font is limited to interactive chips/badges so the schedule table
+   keeps a readable body font for dense event information. */
+.schedule-filter:hover,
+.schedule-filter:focus-visible {
+  border-color: #2f74cf;
+  box-shadow: 0 8px 18px rgba(18, 58, 114, 0.16);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.schedule-filter.is-active {
+  background: linear-gradient(145deg, #0d6efd, #5296ff);
+  color: #fff;
+  border-color: transparent;
+}
+
+.schedule-live-tip {
+  margin-bottom: 0.95rem;
+  color: #4d5f74;
+  font-weight: 600;
+}
+
+/* ----------------------------------------------------------
+   5. Status Badges + Notes
+   ---------------------------------------------------------- */
+.badge {
+  display: inline-block;
+  padding: 0.28rem 0.65rem;
+  border-radius: 20px;
+  font-family: var(--font-accent);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.badge-green  { background-color: var(--luigi-green); color: #fff; }
+.badge-yellow { background-color: var(--coin-yellow); color: #333; }
+.badge-red    { background-color: var(--mario-red); color: #fff; }
+.badge-blue   { background-color: var(--sky-blue); color: #fff; }
+
+.events-callout {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* ----------------------------------------------------------
+   6. Responsive Tweaks
+   ---------------------------------------------------------- */
+@media (max-width: 900px) {
+  .event-banner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .event-banner-copy {
+    padding: 1.25rem;
+  }
+
+  .event-highlight-card {
+    padding: 1rem;
+  }
+
+  .event-highlight-card:hover .event-highlight-media,
+  .event-highlight-card:focus-within .event-highlight-media {
+    height: 136px;
+  }
+
+  .events-table thead th,
+  .events-table tbody td {
+    padding: 0.85rem 0.85rem;
+  }
+}

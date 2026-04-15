@@ -1,0 +1,89 @@
+/* ============================================================
+  Mario Community Hub - Contact Page Styles
+  ============================================================ */
+
+/* HTML layer map:
+  1) .contact-title (section heading)
+  2) .contact-intro (introductory copy)
+  3) .contact-required + .contact-status (form state markers)
+  4) .contact-note (helper text below form content) */
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(35, 42, 142, 0.66), rgba(219, 122, 72, 0.48),rgba(219, 72, 72, 0.48));
+  z-index: -1;
+  
+}
+
+.contact-title {
+  text-align: left;
+}
+
+.contact-intro {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.contact-required {
+  color: var(--mario-red);
+}
+
+.contact-status {
+  font-weight: 600;
+}
+
+.contact-note {
+  margin-top: 0.75rem;
+  color: #65778c;
+  font-size: 1rem;
+  font-family: var(--font-accent);
+}
+
+/* ----------------------------------------------------------
+   2. Community Info Panel
+   ---------------------------------------------------------- */
+.contact-info-panel {
+  padding: 0.65rem 0;
+}
+
+.contact-info-lead {
+  margin: 0 0 1.35rem;
+  color: #6a7582;
+  line-height: 1.55;
+}
+
+.contact-info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-info-item {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.contact-info-icon {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  color: #6b7280;
+}
+
+.contact-info-icon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: currentColor;
+}
+
+.contact-info-text {
+  color: #7a8694;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}

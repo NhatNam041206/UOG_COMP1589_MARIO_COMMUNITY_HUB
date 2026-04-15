@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Base metadata and responsive viewport setup. -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Mario Community Hub</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="imgs/web_icon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="imgs/web_icon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="imgs/web_icon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="imgs/web_icon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="imgs/web_icon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="imgs/web_icon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="imgs/web_icon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="imgs/web_icon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="imgs/web_icon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="imgs/web_icon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="imgs/web_icon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="imgs/web_icon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="imgs/web_icon/favicon-16x16.png" />
+  <link rel="shortcut icon" href="imgs/web_icon/favicon.ico" />
+  <link rel="manifest" href="imgs/web_icon/manifest.json" />
+  <meta name="msapplication-config" content="imgs/web_icon/browserconfig.xml" />
+  <meta name="msapplication-TileColor" content="#e52521" />
+  <meta name="msapplication-TileImage" content="imgs/web_icon/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#e52521" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/shared.css" />
+  <link rel="stylesheet" href="css/about.css" />
+</head>
+<body class="theme-about">
+  <!-- Shared navigation mount point (rendered by js/main.js). -->
+  <div id="main-nav-container"></div>
+
+  <!-- Hero: mascot + glass intro card over themed background image. -->
+  <header class="page-header fade-in-up">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="about-hero-layout">
+        <img
+          src="imgs/Mario_welcome.png"
+          alt="Mario welcoming visitors to the Mario Community Hub"
+          class="hero-side-mascot"
+          loading="eager"
+        />
+        <div class="hero-glass">
+          <h1>About Us</h1>
+          <p>
+            Mario Community Hub brings fan culture, karting fun, and friendly
+            regional events together in one welcoming space.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Story section: origin narrative plus supporting image carousel. -->
+    <section class="section container story-section fade-in-up">
+      <h2 class="section-title">Friends &amp; Fans</h2>
+      <div class="story-z-grid">
+        <article class="story-panel">
+          <!-- Narrative heading for community origin story. -->
+          <h3>From local meetups to a regional hub</h3>
+          <p>
+            Mario Community Hub started in Vietnam as a small fan circle built by
+            friends who loved two things: Super Mario and local karting nights.
+            Our first meetups were simple, social, and full of energy around
+            Ho Chi Minh City and Hanoi.
+          </p>
+          <p>
+            As the community grew, we moved from casual hangouts to better-planned
+            events. We kept the friendly vibe, but added clearer race-day guidance,
+            safer activity setup, and smoother scheduling for larger groups.
+          </p>
+          <p>
+            By 2026, the hub had grown into a regional community across Southeast
+            Asia. Today we focus on three things: fun karting experiences, memorable
+            fan events, and premium collectibles that celebrate every big moment.
+          </p>
+          <p>
+            Our goal stays simple: make every meetup feel easy to join, safe to
+            enjoy, and worth coming back to with your friends.
+          </p>
+        </article>
+
+        <!-- Visual timeline companion carousel. -->
+        <div class="story-image-wrap">
+          <div id="aboutStoryCarousel" class="carousel slide story-carousel" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="3400">
+            <!-- Carousel slides: social, karting, and merch highlights. -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="story-image" src="imgs/events/fan_meeting_feature.jpg" alt="Members greeting each other at a Mario community social" loading="lazy" />
+              </div>
+              <div class="carousel-item">
+                <img class="story-image" src="imgs/karting/start-outdoor-karting.jpg" alt="Outdoor karting lane setup before a race session starts" loading="lazy" />
+              </div>
+              <div class="carousel-item">
+                <img class="story-image" src="imgs/merchs/2_merch.jpg" alt="Collector merch pieces arranged for a fan showcase" loading="lazy" />
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#aboutStoryCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#aboutStoryCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Milestone table: growth timeline from 2024 to 2026. -->
+    <section class="section timeline-section fade-in-up">
+      <div class="container">
+        <h2 class="section-title">How We Grew (2024-2026)</h2>
+        <div class="timeline-table-wrap">
+          <div class="table-responsive">
+            <table class="table timeline-table align-middle mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Period</th>
+                  <th scope="col">Milestone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Timeline row: first local meetup kickoff. -->
+                <tr>
+                  <td>Early 2024</td>
+                  <td>
+                    We hosted our first unofficial "Mushroom Cup" meetup at a local
+                    Ho Chi Minh City track and saw strong early interest in friendly
+                    racing.
+                  </td>
+                </tr>
+                <!-- Timeline row: formal venue partnerships begin. -->
+                <tr>
+                  <td>Mid 2024</td>
+                  <td>
+                    We started working with local track partners so events could run
+                    with clearer safety checks and smoother day-of coordination.
+                  </td>
+                </tr>
+                <!-- Timeline row: first collector coin pilot. -->
+                <tr>
+                  <td>Late 2024</td>
+                  <td>
+                    The "Member Gilded Coin" pilot launched and introduced limited
+                    collectible coins as a new community keepsake.
+                  </td>
+                </tr>
+                <!-- Timeline row: membership scales across regions. -->
+                <tr>
+                  <td>Early 2025</td>
+                  <td>
+                    Membership reached 5,000 active members across Vietnam and
+                    Singapore, supported by tiered programs such as the "Pit Crew"
+                    level.
+                  </td>
+                </tr>
+                <!-- Timeline row: first large fan convention. -->
+                <tr>
+                  <td>Mid 2025</td>
+                  <td>
+                    We hosted the first "Peach's Garden" fan convention with social
+                    activities, networking corners, and creator meetups.
+                  </td>
+                </tr>
+                <!-- Timeline row: beginner race guidance refresh. -->
+                <tr>
+                  <td>Late 2025</td>
+                  <td>
+                    Beginner karting sessions were refreshed with simple coaching
+                    tips so first-time racers could feel confident on track.
+                  </td>
+                </tr>
+                <!-- Timeline row: digital portal launch. -->
+                <tr>
+                  <td>February 2026</td>
+                  <td>
+                    We launched the Mario Hub digital portal to keep registration,
+                    scheduling, and event check-ins in one place.
+                  </td>
+                </tr>
+                <!-- Timeline row: broader Asia-Pacific expansion. -->
+                <tr>
+                  <td>April 2026</td>
+                  <td>
+                    The community expanded to more fan meetups across Asia-Pacific,
+                    helping us support larger regional events while keeping the same
+                    welcoming community spirit.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community profiles: audience types and motivations. -->
+    <section class="about-community-band fade-in-up">
+      <div class="container">
+        <h2 class="section-title">Our Community</h2>
+        <div class="card-grid">
+          <!-- Audience card: long-time Mario fans. -->
+          <article class="card">
+            <div class="community-badge">
+              <img src="imgs/Mario_welcome.png" alt="Mario fan community badge image" loading="lazy" />
+            </div>
+            <h3>Mario Enthusiasts</h3>
+            <p>
+              Long-time fans who enjoy franchise history, themed discussions, and
+              social meetups with others who grew up with the Mario series.
+            </p>
+          </article>
+          <!-- Audience card: performance-focused racers. -->
+          <article class="card">
+            <div class="community-badge">
+              <img src="imgs/mario-karting-race.gif" alt="Racing community badge image with Mario karting animation" loading="lazy" />
+            </div>
+            <h3>Competitive Racers</h3>
+            <p>
+              Members who care most about track logistics, race-day safety, lap
+              times, and reliable event operations built around performance.
+            </p>
+          </article>
+          <!-- Audience card: first-time community visitors. -->
+          <article class="card">
+            <div class="community-badge">
+              <img src="imgs/events/fan_meeting_feature.jpg" alt="Newcomer community badge image showing fans meeting" loading="lazy" />
+            </div>
+            <h3>Newcomers</h3>
+            <p>
+              People who want a friendly introduction to both the Mario universe and
+              karting, supported by welcoming events and beginner guidance.
+            </p>
+          </article>
+          <!-- Audience card: merch and collectible enthusiasts. -->
+          <article class="card">
+            <div class="community-badge">
+              <img src="imgs/merchs/2_merch.jpg" alt="Collector community badge image showing Mario merchandise" loading="lazy" />
+            </div>
+            <h3>Collectors</h3>
+            <p>
+              Dedicated members searching for exclusive gilded coins, limited
+              community merchandise, and memorable collector-focused releases.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership cards: role-based team overview. -->
+    <section class="section container fade-in-up">
+      <h2 class="section-title">Leadership</h2>
+      <div class="card-grid about-leadership-grid">
+        <!-- Leadership card: strategic direction owner. -->
+        <article class="card text-center">
+          <div class="leadership-photo">
+            <img src="imgs/contact/male.png" alt="Executive Director portrait" loading="lazy" />
+          </div>
+          <h3>Executive Director</h3>
+          <p class="leadership-role">Overall Strategy &amp; Growth</p>
+          <p>
+            Leads long-term planning, partnerships, organizational direction, and the
+            continued growth of the hub across regional markets.
+          </p>
+        </article>
+        <!-- Leadership card: event operations owner. -->
+        <article class="card text-center">
+          <div class="leadership-photo">
+            <img src="imgs/contact/male2.png" alt="Events and Logistics Lead portrait" loading="lazy" />
+          </div>
+          <h3>Events &amp; Logistics Lead</h3>
+          <p class="leadership-role">Track Coordination &amp; Safety</p>
+          <p>
+            Oversees event scheduling, venue readiness, operating procedures, and
+            practical safety planning for races and fan meetups.
+          </p>
+        </article>
+        <!-- Leadership card: member engagement owner. -->
+        <article class="card text-center">
+          <div class="leadership-photo">
+            <img src="imgs/contact/female.png" alt="Community Engagement Manager portrait" loading="lazy" />
+          </div>
+          <h3>Community Engagement Manager</h3>
+          <p class="leadership-role">Membership &amp; Networking</p>
+          <p>
+            Supports member communication, social programming, outreach, and the
+            ongoing development of membership experiences.
+          </p>
+        </article>
+        <!-- Leadership card: merch and design owner. -->
+        <article class="card text-center">
+          <div class="leadership-photo">
+            <img src="imgs/contact/male3.png" alt="Merchandise and Design Lead portrait" loading="lazy" />
+          </div>
+          <h3>Merchandise &amp; Design Lead</h3>
+          <p class="leadership-role">Exclusive Member Gifts</p>
+          <p>
+            Manages the design and production of community merchandise, gilded coin
+            programs, and other premium commemorative items.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared footer mount point (rendered by js/main.js). -->
+  <div id="main-footer-container"></div>
+
+  <!-- Bootstrap first, then shared site script. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

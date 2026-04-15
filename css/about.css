@@ -1,0 +1,291 @@
+/* ============================================================
+  Mario Community Hub - About Page Styles
+  ============================================================ */
+
+/* ----------------------------------------------------------
+  1. About Hero
+  ---------------------------------------------------------- */
+/* HTML layer map:
+  1) .page-header (hero shell with background image)
+  2) .hero-overlay (readability gradient overlay)
+  3) .about-hero-layout (content alignment wrapper)
+  4) .hero-side-mascot + .hero-glass (visual + copy content) */
+.page-header {
+  position: relative;
+  min-height: clamp(340px, 58vh, 560px);
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  animation: none;
+  background-image: url("../imgs/karting/start-outdoor-karting.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(35, 78, 142, 0.66), rgba(219, 122, 72, 0.48));
+  z-index: -1;
+}
+
+.about-hero-layout {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(0.9rem, 2.2vw, 1.6rem);
+  max-width: 980px;
+}
+
+.hero-side-mascot {
+  width: clamp(120px, 18vw, 240px);
+  height: auto;
+  flex: 0 0 auto;
+  object-fit: contain;
+  /* filter: drop-shadow(offset-x offset-y blur-radius color); */
+  filter: drop-shadow(-20px 20px 2px rgba(0, 0, 0, 0.34));
+}
+
+.hero-glass {
+  max-width: 720px;
+  padding: clamp(1.4rem, 2.6vw, 2rem);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+  color: #fff;
+}
+
+.hero-glass h1 {
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.hero-glass p {
+  margin: 0;
+  font-size: clamp(1rem, 2.3vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* ----------------------------------------------------------
+   2. Story + Timeline Content
+   ---------------------------------------------------------- */
+/* HTML layer map:
+   1) .story-section (section spacing wrapper)
+   2) .timeline-table-wrap > .timeline-table (history table)
+   3) .story-z-grid (two-column story layout)
+   4) .story-panel + .story-image-wrap/.story-carousel (text + media) */
+.story-section {
+  padding-top: 4rem;
+}
+
+.timeline-table-wrap {
+  background: #ffffff;
+  border: 1px solid #d9e1ec;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(22, 35, 50, 0.08);
+}
+
+.timeline-table {
+  margin-bottom: 0;
+}
+
+.timeline-table thead th {
+  background: #183047;
+  color: #ffffff;
+  font-weight: 700;
+  border-bottom: 0;
+  padding: 1rem 1.1rem;
+}
+
+.timeline-table tbody td {
+  padding: 1rem 1.1rem;
+  color: #394b5f;
+  vertical-align: top;
+  border-color: #e3eaf2;
+}
+
+.timeline-table tbody td:first-child {
+  width: 180px;
+  font-weight: 700;
+  color: #183047;
+  white-space: nowrap;
+}
+
+.timeline-table tbody tr:nth-child(even) td {
+  background: #ffffff;
+}
+
+.story-z-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.story-panel,
+.story-image-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.story-panel {
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  border: 1px solid #e4e8ee;
+  padding: clamp(1.1rem, 2.2vw, 1.6rem);
+}
+
+.story-panel h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.9rem;
+  color: #1f2d3d;
+}
+
+.story-panel p {
+  margin-bottom: 0.95rem;
+  color: #394b5f;
+}
+
+.story-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.story-image-wrap {
+  min-height: 280px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+.story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.story-image-wrap:hover .story-image {
+  transform: scale(1.04);
+}
+
+.story-carousel {
+  height: 100%;
+}
+
+.story-carousel .carousel-inner,
+.story-carousel .carousel-item {
+  height: 100%;
+}
+
+.story-carousel .carousel-control-prev,
+.story-carousel .carousel-control-next {
+  width: 3rem;
+}
+
+.story-carousel .carousel-control-prev-icon,
+.story-carousel .carousel-control-next-icon {
+  background-color: rgba(13, 110, 253, 0.75);
+  border-radius: 999px;
+  background-size: 58% 58%;
+}
+
+.timeline-section {
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+}
+
+/* ----------------------------------------------------------
+  3. Community + Leadership
+  ---------------------------------------------------------- */
+/* HTML layer map:
+  1) .about-community-band (community highlight container)
+  2) .community-badge (avatar-style image token)
+  3) .about-leadership-grid (leadership layout wrapper)
+  4) .leadership-photo + .leadership-role (identity + metadata) */
+.community-badge {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.9rem;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.88);
+  box-shadow: 0 10px 22px rgba(16, 37, 62, 0.26);
+  overflow: hidden;
+}
+
+.community-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-community-band {
+  background: radial-gradient(circle at 8% 18%, #ffffff 0%, #ffffff 30%, #ffffff 100%);
+  padding: 3.8rem 1.5rem;
+}
+
+.about-community-band .card-grid,
+.about-leadership-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about-leadership-grid {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.leadership-photo {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 0.8rem;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  box-shadow: 0 10px 22px rgba(29, 57, 85, 0.28);
+}
+
+.leadership-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.leadership-role {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #2d4b68;
+}
+
+/* ----------------------------------------------------------
+   4. Responsive Tweaks
+   ---------------------------------------------------------- */
+@media (max-width: 900px) {
+  .story-z-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-community-band .card-grid,
+  .about-leadership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero-layout {
+    align-items: center;
+  }
+
+  .hero-side-mascot {
+    width: clamp(96px, 25vw, 140px);
+  }
+
+  .hero-glass {
+    margin: 0.7rem 0;
+  }
+
+  .timeline-table thead th,
+  .timeline-table tbody td {
+    padding: 0.85rem 0.85rem;
+  }
+}

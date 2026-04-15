@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Mario Community Hub</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="imgs/web_icon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="imgs/web_icon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="imgs/web_icon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="imgs/web_icon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="imgs/web_icon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="imgs/web_icon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="imgs/web_icon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="imgs/web_icon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="imgs/web_icon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="imgs/web_icon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="imgs/web_icon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="imgs/web_icon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="imgs/web_icon/favicon-16x16.png" />
+  <link rel="shortcut icon" href="imgs/web_icon/favicon.ico" />
+  <link rel="manifest" href="imgs/web_icon/manifest.json" />
+  <meta name="msapplication-config" content="imgs/web_icon/browserconfig.xml" />
+  <meta name="msapplication-TileColor" content="#e52521" />
+  <meta name="msapplication-TileImage" content="imgs/web_icon/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#e52521" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/shared.css" />
+  <link rel="stylesheet" href="css/services.css" />
+</head>
+<body class="theme-services">
+  <!-- Shared navigation is injected by main.js. -->
+  <div id="main-nav-container"></div>
+
+  <!-- Services hero combines decorative motion layers with readable page intro copy. -->
+  <header class="page-header fade-in-up">
+    <!-- Decorative hero effects stay outside the content flow so text remains readable. -->
+    <div class="services-hero-effects" aria-hidden="true">
+      <img src="imgs/mario-karting-race.gif" alt="" class="services-racer-gif" />
+      <div class="services-race-trail">
+        <img src="imgs/surface.png" alt="" class="services-trail-media" />
+      </div>
+    </div>
+    <h1>Our Services</h1>
+    <p>Discover the core experiences that make the hub feel fast, social, and memorable.</p>
+    <div class="header-chip-row">
+      <button type="button" class="header-chip" data-service-target="service-karting" aria-label="Jump to Professional Karting Logistics">Karting</button>
+      <button type="button" class="header-chip" data-service-target="service-fan-socials" aria-label="Jump to Star-Power Fan Socials">Fan Socials</button>
+      <button type="button" class="header-chip" data-service-target="service-merch" aria-label="Jump to Exclusive Power-Up Merch">Power-Up Merch</button>
+    </div>
+  </header>
+
+  <main class="section container">
+    <!-- Intro copy for the Services section. -->
+    <h2 class="section-title fade-in-up">Core Services</h2>
+    <p class="services-callout text-center fade-in-up">
+      Three themed service areas give fans, racers, and collectors more ways to
+      enjoy the Mario Community Hub.
+    </p>
+
+    <!-- Service row 1: karting logistics overview with modal trigger. -->
+    <div class="row align-items-center service-row fade-in-up" id="service-karting">
+      <div class="col-md-6">
+        <div class="service-copy-card">
+          <span class="service-chip">Trackside</span>
+          <h3>Professional Karting Logistics</h3>
+          <p>
+            We handle high-speed track planning, professional safety marshals,
+            and performance kart rentals so every race feels polished, fast,
+            and fully managed.
+          </p>
+          <a href="#" class="btn-primary service-learn-more" data-service="karting">Learn More</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Service visual: track photo + animated kart strip. -->
+        <div class="service-img-wrapper">
+          <div class="service-art-strip service-art-karting" aria-hidden="true">
+            <img src="imgs/mario-karting.gif" alt="Mario karting animation preview" class="service-art-media" />
+          </div>
+          <img src="imgs/karting/start-outdoor-karting.jpg" alt="Go-karts lined up and ready for racers" class="img-fluid service-img" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Service row 2: themed fan social planning with reversed desktop layout. -->
+    <div class="row align-items-center flex-md-row-reverse service-row fade-in-up" id="service-fan-socials">
+      <div class="col-md-6">
+        <div class="service-copy-card">
+          <span class="service-chip service-chip-gold">Social</span>
+          <h3>Star-Power Fan Socials</h3>
+          <p>
+            From Peach's Garden to Bowser's Castle, we scout themed venues,
+            coordinate catering, and create networking moments that bring
+            super-fans together in style.
+          </p>
+          <a href="#" class="btn-secondary service-learn-more" data-service="fan-socials">Learn More</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Service visual: social image + branded overlay strip. -->
+        <div class="service-img-wrapper">
+          <div class="service-art-strip service-art-social" aria-hidden="true"></div>
+          <img src="imgs/events/fan_meeting_feature.jpg" alt="Mario fans taking photos at a themed meetup" class="img-fluid service-img" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Service row 3: collectibles and merch overview. -->
+    <div class="row align-items-center service-row fade-in-up" id="service-merch">
+      <div class="col-md-6">
+        <div class="service-copy-card">
+          <span class="service-chip">Collectibles</span>
+          <h3>Exclusive Power-Up Merch</h3>
+          <p>
+            We design and distribute limited-edition badges, 1-UP membership
+            gear, and custom event trophies that give your guests a lasting
+            collectible from the day.
+          </p>
+          <a href="#" class="btn-primary service-learn-more" data-service="merch">Learn More</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Service visual: merch image + spinning coin accent. -->
+        <div class="service-img-wrapper">
+          <div class="service-art-strip service-art-merch" aria-hidden="true">
+            <span class="service-coin-spin"></span>
+          </div>
+          <img src="imgs/merchs/merch_fan_meeting.jpeg" alt="Event merch booth with collectible community items" class="img-fluid service-img" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Page-level CTA for users who want a custom package or follow-up contact. -->
+    <div class="text-center mt-3 fade-in-up">
+      <p class="services-callout">
+        Need a themed package for your fan group or community day? We can shape
+        a simple plan around your audience.
+      </p>
+      <a href="contact.html" class="btn-primary">Contact Us</a>
+    </div>
+  </main>
+
+  <!-- Shared footer mount point injected by main.js. -->
+  <div id="main-footer-container"></div>
+
+  <!-- Bootstrap modal host used as a mini sub-page for service details. -->
+  <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content service-modal-content">
+        <div class="modal-header border-0">
+          <h2 class="modal-title h4" id="serviceModalTitle">Service Details</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-0">
+          <!-- Content is rendered dynamically from services.data.js. -->
+          <div id="serviceModalCarousel" class="carousel slide service-modal-carousel mb-3" data-bs-ride="carousel" data-bs-touch="true" data-bs-interval="3600">
+            <!-- Indicators and slides are changed at runtime. -->
+            <div class="carousel-indicators service-modal-indicators" id="service-modal-indicators"></div>
+            <div class="carousel-inner" id="service-modal-slides"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#serviceModalCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#serviceModalCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!-- Structured service content blocks are injected here by services.js. -->
+          <div id="service-modal-details" class="service-modal-details"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/services.data.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>
